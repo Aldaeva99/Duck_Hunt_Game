@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Duck_Hunt_Game</title>
+</head>
+<style>
+	@keyframes moveDuckOne{
+		0%{
+			left: 0px;
+			top: 0px;
+		}
+		100%{
+			left:1180px;
+			top: 300px;
+		}
+	}
+	@keyframes moveDuckTwo{
+		0%{
+			left: 40px;
+			top: 290px;
+		}
+		3%{
+			left: 80px;
+			top: 270px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		6%{
+			left: 120px;
+			top: 260px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		9%{
+			left: 160px;
+			top: 250px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		12%{
+			left: 200px;
+			top: 240px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		15%{
+			left: 240px;
+			top: 230px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		18%{
+			left: 280px;
+			top: 220px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		21%{
+			left: 320px;
+			top: 210px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		24%{
+			left: 360px;
+			top: 200px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		27%{
+			left: 400px;
+			top: 190px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		30%{
+			left: 440px;
+			top: 180px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+
+		}
+		33%{
+			left: 480px;
+			top: 170px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		36%{
+			left: 520px;
+			top: 160px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		39%{
+			left: 560px;
+			top: 150px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		42%{
+			left: 600px;
+			top: 140px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		45%{
+			left: 640px;
+			top: 130px;
+			background: url("duckUR2.png") 0px 0px no-repeat;
+		}
+		48%{
+			left: 680px;
+			top: 120px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		51%{
+			left: 720px;
+			top: 110px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		54%{
+			left: 760px;
+			top: 100px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		57%{
+			left: 800px;
+			top: 90px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}		
+		60%{
+			left: 860px;
+			top: 80px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		63%{
+			left: 900px;
+			top: 70px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+
+		}
+		66%{
+			left: 940px;
+			top: 60px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		70%{
+			left: 980px;
+			top: 50px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		73%{
+			left: 1020px;
+			top: 40px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		76%{
+			left: 1060px;
+			top: 30px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		79%{
+			left: 1100px;
+			top: 25px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		85%{
+			left: 1120px;
+			top: 20px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}
+		90%{
+			left: 1130px;
+			top: 10px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+		95%{
+			left: 1160px;
+			top: 5px;
+			background: url("duckUR2.png") 0 0 no-repeat;
+		}	
+
+		100%{
+			left: 1180px;
+			top: 0px;
+			background: url("duckUR1.png") 0 0 no-repeat;
+		}
+	}		
+	@keyframes moveDuckThree{
+		0%{
+			left: 1180px;
+			top: 300px;
+		}
+		3%{
+			left: 1140px;
+			top: 290px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		6%{
+			left: 1100px;
+			top: 280px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		9%{
+			left: 1060px;
+			top: 270px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		12%{
+			left: 1020px;
+			top: 260px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		15%{
+			left: 980px;
+			top: 250px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		18%{
+			left: 940px;
+			top: 240px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		21%{
+			left: 900px;
+			top: 230px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		24%{
+			left: 860px;
+			top: 220px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		27%{
+			left: 820px;
+			top: 210px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		30%{
+			left: 780px;
+			top: 200px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+
+		}
+		33%{
+			left: 740px;
+			top: 190px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		36%{
+			left: 700px;
+			top: 180px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		39%{
+			left: 660px;
+			top: 170px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		42%{
+			left: 620px;
+			top: 160px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		45%{
+			left: 580px;
+			top: 150px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		48%{
+			left: 540px;
+			top: 140px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		51%{
+			left: 500px;
+			top: 130px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		54%{
+			left: 460px;
+			top: 120px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		57%{
+			left: 420px;
+			top: 110px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}		
+		60%{
+			left: 380px;
+			top: 100px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		63%{
+			left: 340px;
+			top: 90px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+
+		}
+		66%{
+			left: 300px;
+			top: 80px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		70%{
+			left: 260px;
+			top: 70px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		73%{
+			left: 220px;
+			top: 60px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		76%{
+			left: 180px;
+			top: 50px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		79%{
+			left: 140px;
+			top: 40px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		82%{
+			left: 100px;
+			top: 30px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		85%{
+			left: 60px;
+			top: 20px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		88%{
+			left: 40px;
+			top: 10px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+		91%{
+			left: 20px;
+			top: 10px;
+			background: url("duckUL1.png") 0 0 no-repeat;
+		}
+		100%{
+			left: 0px;
+			top: 0px;
+			background: url("duckUL2.png") 0 0 no-repeat;
+		}
+	}		
+	
+	@keyframes moveDog{
+		0%{
+			left: 0px;
+			top: 460px;
+		}
+		3%{
+			left: 30px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		6%{
+			left: 60px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		9%{
+			left: 90px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		12%{
+			left: 120px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}
+		15%{
+			left: 150px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+		}
+		18%{
+			left: 180px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		21%{
+			left: 210px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		24%{
+			left: 240px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		27%{
+			left: 270px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}
+		30%{
+			left: 300px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+
+		}
+		33%{
+			left: 330px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		36%{
+			left: 360px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		39%{
+			left: 390px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		42%{
+			left: 420px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}
+		45%{
+			left: 450px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+		}
+		48%{
+			left: 480px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		51%{
+			left: 510px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		54%{
+			left: 540px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		57%{
+			left: 570px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}		
+		60%{
+			left: 600px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+		}
+		63%{
+			left: 630px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+
+		}
+		66%{
+			left: 660px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		70%{
+			left: 690px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		73%{
+			left: 720px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}
+		76%{
+			left: 750px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+		}
+		79%{
+			left: 780px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		82%{
+			left: 810px;
+			top: 460px;
+			background: url("dog2.png") 0 0 no-repeat;
+		}
+		85%{
+			left: 840px;
+			top: 460px;
+			background: url("dog3.png") 0 0 no-repeat;
+		}
+		88%{
+			left: 870px;
+			top: 460px;
+			background: url("dog4.png") 0 0 no-repeat;
+		}
+		91%{
+			left: 900px;
+			top: 460px;
+			background: url("dog0.png") 0 0 no-repeat;
+		}
+		94%{
+			left: 950px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}
+		97%{
+			left: 1000px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}	
+		100%{
+			left: 1050px;
+			top: 460px;
+			background: url("dog1.png") 0 0 no-repeat;
+		}			
+
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	.wrapper{
+		margin: 0px;
+		padding: 0px;
+		width: 1280px;
+		height: 610px;
+		background: url("bg_full.png") 0 0 no-repeat;
+		cursor: url("aim.cur"), default;
+	}
+	.wrapper_lose{
+		margin: 0 auto;
+		padding: 0px;
+		display: none;
+		width: 640px;
+		height: 310px;
+		background: url("gameover4.png") 0 0 no-repeat;
+	}
+	.wrapper_win{
+		margin: 0px;
+		padding: 0px;
+		display: none;
+		width: 1280px;
+		height: 590px;
+		background: url("win.png") 0 0 no-repeat;
+	}
+	.dog{
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		top: 440px;
+		width: 200px;
+		height: 150px;
+		background-image: url("dog0.png");
+		animation-name: moveDog;
+		animation-duration: 10s;
+		animation-timing-function: steps(1);
+		animation-iteration-count: infinite;
+	}
+	.count{
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		top: 200px;
+		left: 540px;
+		width: 210px;
+		height: 110px;
+		border: 2px solid #3CB371;
+		background-color: #FFF8DC;
+		text-align: center;
+		font-weight: bolder;
+	}
+	.duck1{
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100px;
+		height: 100px;
+		background: url("duckR.png") 0 0 no-repeat;
+		animation-name: moveDuckOne;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.duck2{
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		top: 400px;
+		width: 100px;
+		height: 100px;
+		background: url("duckUR1.png") 0 0 no-repeat;
+		animation-name: moveDuckTwo;
+		animation-duration: 6s;
+		animation-timing-function: steps(1);
+		animation-iteration-count: infinite;	
+	}
+	.duck3{
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		top: 400px;
+		width: 100px;
+		height: 100px;
+		background: url("duckUL1.png") 0 0 no-repeat;
+		animation-name: moveDuckThree;
+		animation-duration: 10s;
+		animation-timing-function: steps(1);
+		animation-iteration-count: infinite;	
+	}
+	.lose{ 	
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 200px;
+		height: 50px;
+		font-size: 20px;
+		color: red;
+		font-weight: bolder;
+	}
+	button{
+		margin: 0px;
+		padding: 0px;
+		width: 210px;
+		height: 56px;
+		border: 1px solid #3CB371;
+		background-color: #90EE90;
+		font-size: 15px;
+		font-weight: bolder;
+		color: white;
+	}
+	.button_restart{
+		position: relative;
+		left: 200px;
+		top: 220px;
+	}
+	span{
+		margin: 0px;
+		padding: 0px;
+		color: red;
+	}
+	</style>
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper_lose">
+			<button class="button_restart">НАЧАТЬ ЗАНОВО</button>
+		</div>
+		<div class="wrapper_win"></div>
+		<div class="dog"></div>	
+		<div class="count">Убей 3 утки, разрешается 5 промахов. <span>!Осторожно: не убей собаку!</span>
+			<div class="button">
+				<button type="button">НАЧАТЬ ИГРУ</button>
+			</div>
+		</div>	
+		<div class="duck1"></div>
+		<div class="duck2"></div>	
+		<div class="duck3"></div>
+		<div class="lose"></div>	
+	</div>
+	<script>
+		var wrapper = document.querySelector(".wrapper");
+		var wrapper_lose = document.querySelector(".wrapper_lose");
+		var wrapper_win = document.querySelector(".wrapper_win");
+		var count = document.querySelector(".count");
+		var dog = document.querySelector(".dog");
+		var duck1 = document.querySelector(".duck1");
+		var duck2 = document.querySelector(".duck2");
+		var duck3 = document.querySelector(".duck3");
+		var lose = document.querySelector(".lose");
+		var button = document.querySelector(".button");
+		var button_restart = document.querySelector(".button_restart");
+		var i = 0;
+		
+		button.addEventListener("click", function(ev){ 
+			duck1.style.display = "block";
+			duck2.style.display = "block";
+			duck3.style.display = "block";
+			dog.style.display = "block";
+			count.style.display = "none";
+		});
+
+		wrapper.addEventListener("click", function(ev){
+			if(ev.target.className=="wrapper"){
+				i = i+1
+				lose.textContent = "ПРОМАХОВ: " + i;
+				if(i===5){
+					count.style.display = "none";
+					duck1.style.display = "none";
+					duck2.style.display = "none";
+					duck3.style.display = "none";
+					dog.style.display = "none";
+					wrapper_lose.style.display = "block";
+					lose.style.display = "none";
+				}
+			}
+		});
+
+		dog.addEventListener("click", function(ev){
+			if(ev.target.className=="dog"){
+				duck1.style.display = "none";
+				duck2.style.display = "none";
+				duck3.style.display = "none";
+				dog.style.display = "none";
+				lose.style.display = "none";
+				wrapper_lose.style.display = "block";
+				// dog.style.animationPlayState = "paused"
+				// dog.style.backgroundImage = "url(dogStop.png)";
+				// dog.style.background = "url(dogStop.png)";
+			}
+		});
+
+		button_restart.addEventListener("click", function(ev){
+				duck1.style.display = "block";
+				duck2.style.display = "block";
+				duck3.style.display = "block";
+				dog.style.display = "block";
+				wrapper_lose.style.display = "none";
+				lose.style.display = "block";
+				i = 0;
+		});
+
+		function killDuck(){
+			var y = 0;
+			duck1.addEventListener("click", function(ev){
+				if(ev.target.tagName=="DIV"){
+					y = y+1
+					duck1.style.display = "none"
+				}
+				if(y===3){
+					wrapper_win.style.display = "block";
+					count.style.display = "none";
+					duck1.style.display = "none";
+					duck2.style.display = "none";
+					duck3.style.display = "none";
+					dog.style.display = "none";
+					lose.style.display = "none";
+				}
+			});
+			duck2.addEventListener("click", function(ev){
+				if(ev.target.tagName=="DIV"){
+					y = y+1;
+					duck2.style.display = "none";
+				}
+				if(y===3){
+					wrapper_win.style.display = "block";
+					count.style.display = "none";
+					duck1.style.display = "none";
+					duck2.style.display = "none";
+					duck3.style.display = "none";
+					dog.style.display = "none";
+					lose.style.display = "none";
+				}
+			})
+			duck3.addEventListener("click", function(ev){
+				if(ev.target.tagName=="DIV"){
+					y=y+1
+					duck3.style.display = "none";
+				}
+				if(y===3){
+					wrapper_win.style.display = "block";
+					count.style.display = "none";
+					duck1.style.display = "none";
+					duck2.style.display = "none";
+					duck3.style.display = "none";
+					dog.style.display = "none";
+					lose.style.display = "none";
+				}
+			})
+		};
+		killDuck(duck1, duck1, duck3);
+
+	</script>
+</body>
+</html>
